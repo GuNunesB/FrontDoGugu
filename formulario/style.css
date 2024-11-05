@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: titulo;
+    src: url(fontes/bubblegum-sans-regular.otf);
+    font-weight: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Cores */
+:root {
+    --preto: #010409;
+    --branco: #ffffff;
+    --azulescuro: #0a1a3d;
+    --cinza: #0D1117;
+    --cinzaclaro: #212830;
+}
+
+body {
+    background: var(--preto);
+}
+
+#interface{
+    background: var(--cinza);
+    max-width: 1200px;
+    margin: 10px;
+    margin: 0 auto;
+}
+
+.topo {
+    height: 70px;
+}
+
+.logo img {
+    margin: 10px 20px;
+    position: relative;
+}
+
+.menu {
+    display: block;
+    position: absolute;
+    width: 800px;
+    left: 800px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu li {
+    float: left;
+}
