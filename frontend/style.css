@@ -26,40 +26,114 @@
 }
 
 body {
-    background: #ff1100;
+    background: var(--cor6);
 }
 /* Layout */
 .container {
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.flex {
     display: flex;
+    justify-content: space-between;
+    background: #6e5a49;
 }
 
 /*SMARTPHONE PORTRAIT*/
+header {
+    height: 60px;
+}
 
+#check {
+    display: none;
+}
+
+nav label {
+    font-size: 2.8em;
+    position: fixed;
+    top: -3px;
+    right: 15px;
+}
+
+nav ul {
+    list-style: none;
+    background: var(--cor3);
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 80%;
+    transition: all 0.5s;
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid var(--cor2);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor1);
+    font-family: var(--texto);
+    font-size: 1.3rem;
+}
+
+#check:checked ~ ul {
+    right: 0;
+}
 
 /*SMARTPHONE LANDSCAPE*/
 @media (min-width: 576px) {
     body {
-        background: #ff7300;
+        background: #ff0000;
+    }
+    .container {
+        max-width: 540px;
     }
 }
 
 /*TABLET PORTRAIT*/
 @media (min-width: 768px) {
     body {
-        background: #ffee00;
+        background: #ffbb00;
+    }
+    .container {
+        max-width: 720px;
     }
 }
 
 /*TABLET LANDSCAPE*/
 @media (min-width: 992px) {
     body {
-        background: #269153;
+        background: #48ff00;
+    }
+    .container {
+        max-width: 960px;
     }
 }
 
 /*PC*/
 @media (min-width: 1200px) {
     body {
-        background: #0051ff;
+        background: #1100ff;
+    }
+    .container {
+        max-width: 1140px;
+    }
+
+    /* Cabeçalho */
+    header {
+        height: 125px;
+    }
+    .logo img {
+        margin-top: 30px;
+        margin-left: 30px;
     }
 }
