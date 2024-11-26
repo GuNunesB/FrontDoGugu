@@ -3,12 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
-:root{
+:root {
     /*Cores:*/
-    --cor1: #e8e8e8; /*Fontes*/
-    --cor2: #a1a1a1; /*Cartão*/
-    --cor3: #434343; /*Menu, Rodapé e Cartão*/
-    --cor4: #173261; /*Botão*/
+    --cor1: #e8e8e8;
+    /*Fontes*/
+    --cor2: #a1a1a1;
+    /*Cartão*/
+    --cor3: #434343;
+    /*Menu, Rodapé e Cartão*/
+    --cor4: #173261;
+    /*Botão*/
     --cor5: #fff;
     --cor6: #000;
 
@@ -28,6 +32,7 @@
 body {
     background: var(--cor5);
 }
+
 /* Layout */
 .container {
     margin: 0 auto;
@@ -39,6 +44,7 @@ body {
     right: 10px;
     bottom: 10px;
 }
+
 .botao {
     text-decoration: none;
     color: var(--cor1);
@@ -49,15 +55,29 @@ body {
     border-radius: 20px;
     padding: 10px 40px;
 }
+
 .botao:hover {
     background: #0e1f3b;
 }
 
 .flex {
     display: flex;
+
     justify-content: space-between;
 
 }
+
+.flex2 {
+    display: flex;
+    align-items: center;
+}
+
+.flex3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 /*SMARTPHONE PORTRAIT*/
 header {
@@ -98,7 +118,7 @@ nav ul li a {
     font-size: 1.3rem;
 }
 
-#check:checked ~ ul {
+#check:checked~ul {
     right: 0;
 }
 
@@ -115,63 +135,133 @@ main {
     text-align: center;
     font-family: var(--titulo);
 }
+
 main h1 {
     font-size: 3em;
     color: var(--cor5);
 }
+
 main h2 {
     font-size: 1.5em;
     margin: 20px 0px 50px 0px;
     color: var(--cor5);
 }
 
+/*SOBRE*/
+#sobre {
+    background: url(img/background5.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0px;
+    
+}
+
+.destaque_sobre {
+    display: none;
+}
+
+.texto_sobre {
+    padding: 0px 10px;
+    font-size: var(--texto);
+}
+
+.texto_sobre h2 {
+    margin-bottom: 10px;
+    font-family: var(--titulo);
+}
+
+.texto_sobre p {
+    font-size: 1.4rem;
+}
+
+.topico_sobre {
+    margin-top: 20px;
+}
+.topico_sobre img {
+    margin-right: 10px;
+}
+ /* ONE PAGE */
+#onepage {
+    padding: 50px 10px;
+}
+#onepage h2 {
+    font-family: var(--titulo);
+    margin-bottom: 2rem;
+}
+#onepage p {
+    font-family: var(--texto);
+    margin-bottom: 1.4rem;
+}
+.video iframe{
+    width: 340px;
+    height: 190px;
+}
 
 /*SMARTPHONE LANDSCAPE*/
 @media (min-width: 576px) {
-    
+
     .container {
         max-width: 540px;
     }
+
     nav label {
         right: 73px;
     }
+
     /**Destaque**/
-    main h1, main h2 {
+    main h1,
+    main h2 {
         text-shadow: var(--cor6) 0.5rem 0.5rem 0.5rem;
+    }
+
+    /*ONEPAGE*/
+    .video iframe {
+        width: 560px;
+        height: 315px;
     }
 }
 
 /*TABLET PORTRAIT*/
 @media (min-width: 768px) {
-    
+
     .container {
         max-width: 720px;
     }
+
     label {
         right: 35px;
     }
 
     /** Destaque **/
-    main{
+    main {
         height: 45vh;
-    } 
+    }
+
     main h1 {
         font-size: 5em;
     }
+
     main h2 {
         font-size: 2em;
+    }
+    /*SOBRE*/
+    .texto_sobre h2 {
+        font-size: 2.8rem;
+    }
+    .texto_sobre p {
+        font-size: 1.8rem;
     }
 }
 
 /*TABLET LANDSCAPE*/
 @media (min-width: 992px) {
-    
+
     .container {
         max-width: 960px;
     }
 
     /** Destaque **/
-    main{
+    main {
         height: 70vh;
     }
 }
@@ -187,15 +277,18 @@ main h2 {
     header {
         height: 125px;
     }
+
     .logo img {
         margin-top: 14px;
         margin-left: 30px;
         width: 100px;
         height: auto;
     }
+
     label {
         display: none;
     }
+
     nav ul {
         position: static;
         height: auto;
@@ -203,15 +296,39 @@ main h2 {
         margin-top: 38px;
         width: 400px;
     }
+
     nav ul li {
         float: left;
         border: 0;
     }
+
     nav ul li a {
         color: var(--cor4);
         font-size: 1rem;
     }
+
     nav ul li a:hover {
         color: #0e1f3b;
+    }
+
+    /*SOBRE*/
+    #sobre {
+        background-attachment: fixed;
+        /** Efeito parallax **/
+    }
+
+    .destaque_sobre {
+        display: inline;
+    }
+
+    .destaque_sobre img {
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+
+    /*ONEPAGE*/
+    .flex3 {
+        flex-direction: row;
+        align-items: center;
     }
 }
