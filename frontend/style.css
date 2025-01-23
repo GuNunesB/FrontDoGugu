@@ -78,6 +78,23 @@ body {
     align-items: center;
 }
 
+.flex4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex5 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.flex6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .card{
     margin-top: 25px;
     width: 340px;
@@ -267,6 +284,46 @@ main h2 {
     font-family: var(--titulo);
 }
 
+/* Rodapé */
+address {
+    padding: 35px 10px 50px 10px;
+    background: url(img/background5.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--cor1);
+}
+
+address a {
+    text-decoration: none;
+    color: var(--cor1);
+}
+
+address img {
+    padding-top: 15px;
+}
+
+.icone_local {
+    display: none;
+}
+
+.dados {
+    margin: 30px 0px 15px 0px;
+}
+
+.google_maps {
+    display: none;
+}
+
+footer {
+    padding: 50px;
+    background: var(--cor3);
+    color: var(--cor1);
+    text-align: center;
+}
+
+.social {
+    margin-bottom: 15px 0px;
+}
 /*SMARTPHONE LANDSCAPE*/
 @media (min-width: 576px) {
 
@@ -288,6 +345,12 @@ main h2 {
     .video iframe {
         width: 560px;
         height: 315px;
+    }
+
+    .flex5 {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -413,5 +476,27 @@ main h2 {
     }
     .qrcode{
         display: inline;
+    }
+
+    .icone_local {
+        display: inline;
+    }
+
+    .icone_mapa {
+        display: none;
+    }
+    
+    .google_maps {
+        display: inline;
+    }
+
+    .flex6 {
+        flex-direction: row-reverse;
+    }
+
+    address {
+        font-size: 1.5rem;
+        font-family: var(--texto);
+        font-weight: 700;
     }
 }
